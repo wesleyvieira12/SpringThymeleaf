@@ -26,4 +26,38 @@ public class NotaAlunoMateria {
 	@ManyToOne
 	@JoinColumn(name="materia_id")
 	private Materia materia;
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public BigDecimal getNota() {
+		return nota;
+	}
+
+	public void setNota(BigDecimal nota) {
+		this.nota = nota;
+	}
+
+	public Aluno getAluno() {
+		return aluno;
+	}
+
+	public void setAluno(Aluno aluno) {
+		this.aluno = aluno;
+	}
+
+	public Materia getMateria() {
+		return materia;
+	}
+
+	public void setMateria(Materia materia) {
+		this.materia = materia;
+	}
+	
+	
 }

@@ -26,4 +26,30 @@ public class Professor {
 	
 	@OneToMany(mappedBy="professor")
 	private List<Materia> materias;
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public List<Materia> getMaterias() {
+		return materias;
+	}
+
+	public void setMaterias(List<Materia> materias) {
+		this.materias = materias;
+	}
+	
+	
 }

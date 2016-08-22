@@ -43,6 +43,15 @@ public class Aluno {
 	private List<NotaAlunoMateria> notaAlunoMaterias;
 	
 	
+	
+
+	public List<NotaAlunoMateria> getNotaAlunoMaterias() {
+		return notaAlunoMaterias;
+	}
+
+	public void setNotaAlunoMaterias(List<NotaAlunoMateria> notaAlunoMaterias) {
+		this.notaAlunoMaterias = notaAlunoMaterias;
+	}
 
 	public Serie getSerie() {
 		return serie;
