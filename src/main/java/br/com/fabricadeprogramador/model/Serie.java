@@ -12,6 +12,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
+import javax.validation.constraints.Size;
 
 import org.hibernate.validator.constraints.NotBlank;
 
@@ -26,8 +27,9 @@ public class Serie {
 	private String nome;
 	
 	@NotBlank(message="Preencha o turno")
-	@Column(nullable=false)
-	private char turno;
+	@Size(max=1, message="Somente um caractere")
+	@Column(nullable=false, length=1)
+	private String turno;
 	
 	@OneToMany(mappedBy="serie")
 	private List<Aluno> alunos;
@@ -69,11 +71,11 @@ public class Serie {
 		this.nome = nome;
 	}
 
-	public char getTurno() {
+	public String getTurno() {
 		return turno;
 	}
 
-	public void setTurno(char turno) {
+	public void setTurno(String turno) {
 		this.turno = turno;
 	}
 	

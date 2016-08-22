@@ -103,27 +103,29 @@
 								</span>
 							</div> <!-- /input-group -->
 						</li>
-						<li><a href="index.html"><i class="fa fa-dashboard fa-fw"></i>Aluno</a>
-							<ul class="nav nav-second-level">
-								<li><a href="flot.html">Novo</a></li>
-								<li><a href="morris.html">Listar</a></li>
-							</ul> <!-- /.nav-second-level --></li>
-						<li><a href="#"><i class="fa fa-bar-chart-o fa-fw"></i>Professor<span
+						<li><a href="#"><i class="fa fa-users fa-fw"></i>Aluno<span
 								class="fa arrow"></span></a>
 							<ul class="nav nav-second-level">
-								<li><a href="flot.html">Novo</a></li>
-								<li><a href="morris.html">Listar</a></li>
+								<li><a th:href="@{/aluno/novo/}">Novo</a></li>
+								<li><a th:href="@{/aluno/listar/}">Listar</a></li>
 							</ul> <!-- /.nav-second-level --></li>
-							<li><a href="index.html"><i class="fa fa-dashboard fa-fw"></i>Materia</a>
-							<ul class="nav nav-second-level">
-								<li><a href="flot.html">Nova</a></li>
-								<li><a href="morris.html">Listar</a></li>
-							</ul> <!-- /.nav-second-level --></li>
-						<li><a href="#"><i class="fa fa-bar-chart-o fa-fw"></i>Serie<span
+						<li><a href="#"><i class="fa fa-mortar-board fa-fw"></i>Professor<span
 								class="fa arrow"></span></a>
 							<ul class="nav nav-second-level">
-								<li><a href="flot.html">Nova</a></li>
-								<li><a href="morris.html">Listar</a></li>
+								<li><a th:href="@{/professor/novo/}">Novo</a></li>
+								<li><a th:href="@{/professor/novo/}">Listar</a></li>
+							</ul> <!-- /.nav-second-level --></li>
+							<li><a href="#"><i class="fa fa-folder-open fa-fw"></i>Materia<span
+								class="fa arrow"></span></a>
+							<ul class="nav nav-second-level">
+								<li><a th:href="@{/materia/novo/}">Nova</a></li>
+								<li><a th:href="@{/materia/novo/}">Listar</a></li>
+							</ul> <!-- /.nav-second-level --></li>
+						<li><a href="#"><i class="fa  fa-th-list fa-fw"></i>Serie<span
+								class="fa arrow"></span></a>
+							<ul class="nav nav-second-level">
+								<li><a th:href="@{/serie/nova/}">Nova</a></li>
+								<li><a th:href="@{/serie/listar/}">Listar</a></li>
 							</ul> <!-- /.nav-second-level --></li>
 
 					</ul>

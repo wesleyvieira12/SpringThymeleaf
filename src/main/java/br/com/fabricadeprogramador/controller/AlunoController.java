@@ -25,8 +25,8 @@ public class AlunoController {
 	@Autowired
 	private SerieRepository serieRepository;
 	
-	@RequestMapping(value="inicio",method=RequestMethod.GET)
-	public String index(Model model){
+	@RequestMapping(value="listar",method=RequestMethod.GET)
+	public String listar(Model model){
 		model.addAttribute("alunos",alunoRepository.findAll());
 		return "aluno/ListarAlunos";
 	}

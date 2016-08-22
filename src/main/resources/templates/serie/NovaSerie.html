@@ -5,34 +5,20 @@
 	layout:decorator="layout/LayoutPadrao">
 
 <head>
-<title>Sistema Escolar - Alunos</title>
+<title>Sistema Escolar - Series</title>
 </head>
 
 <body>
 	<div layout:fragment="conteudo">
 		<div class="row">
 			<div class="col-lg-12">
-				<h1 class="page-header">Novo aluno</h1>
+				<h1 class="page-header">Nova serie</h1>
 			</div>
 			<!-- /.col-lg-12 -->
 
 		</div>
-		<div class="row" th:if="${series.empty}">
-			<div class="col-lg-6">
-				<div class="alert  alert-danger  alert-dismissible" role="alert">
-					<button type="button" class="close" data-dismiss="alert"
-						aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-					</button>
-					<div>
-						<i class="fa  fa-exclamation-circle"></i> <span> Não existe
-							series para cadastrar novos alunos!</span>
-					</div>
-
-				</div>
-			</div>
-		</div>
-		<div class="row" th:if="${not series.empty}">
+		
+		<div class="row">
 			<div class="col-lg-12">
 
 
@@ -46,8 +32,7 @@
 						<span th:text="${mensagem}"></span>
 					</div>
 
-					<form role="form" th:action="@{/aluno/novo/}" th:object="${aluno}"
-						method="post">
+					<form role="form" th:action="@{/serie/nova/}" th:object="${serie}" method="post">
 
 						<div class="alert  alert-danger  alert-dismissible" role="alert"
 							th:if="${#fields.hasAnyErrors()}">
@@ -69,37 +54,30 @@
 								th:field="*{nome}" />
 
 						</div>
-						<div class="form-group"
-							th:classappend="${#fields.hasErrors('nome')} ? has-error">
-							<label>Idade</label> <input class="form-control" type="text"
-								th:field="*{idade}" />
+												<div class="form-group">
+							<label>Turno</label>
+							<div class="radio">
+								<label> <input type="radio" name="optionsRadios"
+									id="optionsRadios1" value="M" th:field="*{turno}" checked="true" />Manhã
+								</label>
+							</div>
+							<div class="radio">
+								<label> <input type="radio" name="optionsRadios"
+									id="optionsRadios2" th:field="*{turno}" value="T" />Tarde
+								</label>
+							</div>
+							<div class="radio">
+								<label> <input type="radio" name="optionsRadios"
+									id="optionsRadios2" th:field="*{turno}" value="N" />Noite
+								</label>
+							</div>
+							</div>
 
-						</div>
-						<div class="form-group">
-							<label>Sexo</label>
-							<div class="radio">
-								<label> <input type="radio" name="optionsRadios"
-									id="optionsRadios1" value="M" th:field="*{sexo}" checked="true" />Masculino
-								</label>
-							</div>
-							<div class="radio">
-								<label> <input type="radio" name="optionsRadios"
-									id="optionsRadios2" th:field="*{sexo}" value="F" />Feminino
-								</label>
-							</div>
-							</div>
-							<div class="form-group"
-								th:classappend="${#fields.hasErrors('nome')} ? has-error">
-								<label>Serie</label> <select class="form-control" type="text"
-									th:field="*{serie}">
-									<option value="">Selecione a serie</option>
-									<option th:each="serie : ${series}" th:value="${serie.id}"
-										th:text="${serie.nome}"></option>
-								</select>
-							</div>
+							
 							<div class="form-group">
 								<button class="btn  btn-primary" type="submit">Salvar</button>
 							</div>
+							
 							</form>
 						</div>
 
