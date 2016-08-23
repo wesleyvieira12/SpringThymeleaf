@@ -18,9 +18,16 @@
 
 		</div>
 		<div class="row">
+			
 			<div class="col-lg-12">
-
-
+			<div class="alert  alert-success  alert-dismissible" role="alert"
+						th:if="${not #strings.isEmpty(mensagem)}">
+						<button type="button" class="close" data-dismiss="alert">
+							<span aria-hidden="true">&times;</span>
+						</button>
+						<span th:text="${mensagem}"></span>
+					</div>
+			
 
 
 
@@ -42,7 +49,7 @@
 							<td th:text="${aluno.idade}">22</td>
 							<td th:text="${aluno.sexo}">M</td>
 							<td th:text="${aluno.serie.nome}">1</td>
-							<td><i class="fa fa-pencil fa-fw"></i> <i class="fa fa-trash-o fa-fw"></i></td>
+							<td><a th:href="@{/aluno/alterar/{id}(id=${aluno.id})}"><i class="fa fa-pencil fa-fw"></i></a> <a th:href="@{/aluno/excluir/{id}(id=${aluno.id})}"><i class="fa fa-trash-o fa-fw"></i></a></td>
 						</tr>
 						<tr th:if="${alunos.empty}">
 							<td colspan="6">Nenhum aluno cadastrado</td>

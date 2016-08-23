@@ -9,4 +9,5 @@ import br.com.fabricadeprogramador.model.Aluno;
 public interface AlunoRepository extends JpaRepository<Aluno, Long>{
 	//@Query("select c from Cliente c where c.email=:email")
 	//public Aluno buscarPorEmail(@Param("email") String email);
+	
 }
