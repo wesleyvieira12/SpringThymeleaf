@@ -1,4 +1,4 @@
-package br.com.fabricadeprogramador.model;
+package br.com.escola.model;
 
 import java.math.BigDecimal;
 

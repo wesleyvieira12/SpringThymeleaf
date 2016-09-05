@@ -1,4 +1,4 @@
-package br.com.fabricadeprogramador.controller;
+package br.com.escola.controller;
 
 import javax.validation.Valid;
 
@@ -9,8 +9,9 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
-import br.com.fabricadeprogramador.model.Serie;
-import br.com.fabricadeprogramador.repository.SerieRepository;
+
+import br.com.escola.model.Serie;
+import br.com.escola.repository.SerieRepository;
 
 @Controller
 @RequestMapping("serie/")

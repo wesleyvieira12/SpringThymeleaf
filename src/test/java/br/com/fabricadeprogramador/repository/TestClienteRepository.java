@@ -9,7 +9,8 @@ import org.springframework.boot.test.autoconfigure.orm.jpa.AutoConfigureTestData
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import br.com.fabricadeprogramador.model.Aluno;
+import br.com.escola.model.Aluno;
+import br.com.escola.repository.AlunoRepository;
 
 @RunWith(SpringRunner.class)
 @DataJpaTest

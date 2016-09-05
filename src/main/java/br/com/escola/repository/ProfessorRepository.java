@@ -1,8 +1,8 @@
-package br.com.fabricadeprogramador.repository;
+package br.com.escola.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import br.com.fabricadeprogramador.model.Professor;
+import br.com.escola.model.Professor;
 
 public interface ProfessorRepository extends JpaRepository<Professor, Long>{
 
