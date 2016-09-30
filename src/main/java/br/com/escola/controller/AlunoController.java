@@ -14,6 +14,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import br.com.escola.model.Aluno;
 import br.com.escola.repository.AlunoRepository;
+import br.com.escola.repository.PermisaoRepository;
 import br.com.escola.repository.SerieRepository;
 
 @Controller
@@ -26,8 +27,11 @@ public class AlunoController {
 	@Autowired
 	private SerieRepository serieRepository;
 	
+	@Autowired
+	private PermisaoRepository permisao;
+	
 	@RequestMapping(value="listar",method=RequestMethod.GET)
-	public String listar(Model model){
+	public String listar(Model model){		
 		model.addAttribute("alunos",alunoRepository.findAll());
 		return "aluno/ListarAlunos";
 	}
